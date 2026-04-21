@@ -28,10 +28,20 @@ body {
   margin: 0;
   color: var(--ink);
   font-family: "Manrope", sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   background:
     radial-gradient(circle at top left, rgba(167, 108, 58, 0.12), transparent 28%),
     radial-gradient(circle at top right, rgba(99, 121, 95, 0.16), transparent 30%),
     linear-gradient(180deg, #f7f1e8 0%, #f2ece4 50%, #efe9df 100%);
+}
+
+p,
+ul,
+ol,
+dl {
+  margin: 0;
 }
 
 img {
@@ -229,6 +239,10 @@ a {
   max-width: 12ch;
 }
 
+.hero-copy > * + * {
+  margin-top: 16px;
+}
+
 .hero-text,
 .section-heading p,
 .campaign-card p,
@@ -239,6 +253,10 @@ a {
 .feature-list li {
   color: var(--muted);
   line-height: 1.75;
+}
+
+.hero-text {
+  max-width: 62ch;
 }
 
 .eyebrow,
@@ -266,7 +284,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin: 28px 0 32px;
+  margin: 12px 0 12px;
 }
 
 .hero-stats {
@@ -339,6 +357,26 @@ a {
   margin-bottom: 6px;
 }
 
+.portrait-copy span,
+.portrait-copy strong {
+  line-height: 1.35;
+}
+
+.section-heading {
+  display: grid;
+  gap: 10px;
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  line-height: 1.08;
+}
+
+.section-heading p {
+  max-width: 60ch;
+}
+
 .intro-grid,
 .tag-layout,
 .campaign-grid,
@@ -365,13 +403,15 @@ a {
 
 .feature-list,
 .stack-list {
-  margin: 0;
-  padding-left: 18px;
+  display: grid;
+  gap: 12px;
+  padding-left: 20px;
 }
 
-.feature-list li + li,
-.stack-list li + li {
-  margin-top: 10px;
+.feature-list li,
+.stack-list li,
+.campaign-section-block li {
+  padding-left: 2px;
 }
 
 .tag-card {
@@ -379,6 +419,14 @@ a {
   border-radius: var(--radius-lg);
   background: rgba(255, 251, 244, 0.66);
   border: 1px solid rgba(24, 32, 40, 0.08);
+}
+
+.tag-card h3,
+.info-card h3,
+.achievement-card h3,
+.timeline-body h3 {
+  margin: 0 0 14px;
+  line-height: 1.2;
 }
 
 .tag-wrap {
@@ -479,6 +527,8 @@ a {
 }
 
 .campaign-card-body {
+  display: grid;
+  gap: 10px;
   padding: 22px;
 }
 
@@ -491,8 +541,8 @@ a {
 }
 
 .campaign-card h3 {
-  margin: 8px 0;
   font-size: 1.22rem;
+  line-height: 1.2;
 }
 
 .campaign-detail {
@@ -524,7 +574,8 @@ a {
 }
 
 .campaign-section-block ul {
-  margin: 0;
+  display: grid;
+  gap: 10px;
   padding-left: 18px;
 }
 
@@ -560,7 +611,14 @@ a {
 }
 
 .timeline-meta strong {
+  display: block;
+  line-height: 1.3;
   font-size: 1.12rem;
+}
+
+.timeline-body {
+  display: grid;
+  gap: 14px;
 }
 
 .achievement-grid {
@@ -579,6 +637,7 @@ a {
 .stack-list li {
   display: flex;
   flex-direction: column;
+  gap: 4px;
 }
 
 .language-strip {
@@ -593,11 +652,21 @@ a {
 }
 
 .contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
   min-height: 170px;
 }
 
 .contact-card a {
   font-weight: 700;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.contact-card p {
+  line-height: 1.65;
 }
 
 .site-footer {
@@ -692,6 +761,10 @@ a {
 
   .hero h1 {
     font-size: 2.6rem;
+  }
+
+  .hero-copy > * + * {
+    margin-top: 14px;
   }
 
   .portrait-panel img {
