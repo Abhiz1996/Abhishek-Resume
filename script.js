@@ -4,7 +4,7 @@ const campaigns = [
     label: "Flagship Event",
     title: "Huddle Global 2022-2025",
     summary:
-      "Part of the marketing, social media and design leadership team for one of India's largest startup events, managing multi-channel visibility across multiple editions.",
+      "Part of the marketing, social media and design leadership team for one of India's largest startup events, managing visibility, storytelling, recaps, and ecosystem-facing communication across multiple editions.",
     image: "assets/HCW09189.jpeg",
     imageClass: "",
     sections: [
@@ -19,10 +19,10 @@ const campaigns = [
       {
         heading: "Role & Responsibilities",
         items: [
-          "Led social media strategy and execution across platforms including LinkedIn and Instagram.",
-          "Managed content calendars and publishing schedules with a focus on reach quality and messaging clarity.",
+          "Led social media strategy and execution across platforms including LinkedIn, Instagram, and event communication channels.",
+          "Managed content calendars, event storytelling, and publishing schedules with a focus on reach quality and messaging clarity.",
           "Worked with leadership and stakeholders to translate event initiatives into public communication.",
-          "Created and managed visuals, reels, and promotional materials."
+          "Created and managed visuals, reels, recap content, and promotional materials."
         ]
       },
       {
@@ -31,6 +31,23 @@ const campaigns = [
           "Expanded event visibility across the startup ecosystem with sustained engagement.",
           "Strengthened positioning for Huddle Global as a premier startup networking platform.",
           "Supported communications for 1000+ startup participants across multiple events."
+        ]
+      },
+      {
+        heading: "Reference Videos",
+        links: [
+          {
+            label: "Huddle Global 2025 Official Recap",
+            url: "https://www.youtube.com/watch?v=EGpW3zKKbuw"
+          },
+          {
+            label: "Huddle Global 2024 Mashup",
+            url: "https://www.youtube.com/watch?v=SBy4iKOX-VI"
+          },
+          {
+            label: "Huddle Global 2023 Highlights",
+            url: "https://www.youtube.com/watch?v=VjLwFyD5HDE"
+          }
         ]
       }
     ]
@@ -106,36 +123,37 @@ const campaigns = [
     ]
   },
   {
-    id: "dopamine",
-    label: "Media Production",
-    title: "Dopamine Advertisements Campaigns",
+    id: "reports",
+    label: "Editorial Systems",
+    title: "Newsletters & Reports",
     summary:
-      "Supported commercial and campaign production from story shaping to post-production with a focus on message clarity and narrative quality.",
-    textMedia: "Script editing, production support, and commercial storytelling.",
+      "Managed editorial communication through newsletters, reports, and magazine-style publishing that extended the visibility and documentation of ecosystem work.",
+    textMedia: "Newsletters, reports, and ecosystem storytelling.",
     imageClass: "is-text",
     sections: [
       {
         heading: "Overview",
         items: [
-          "Assisted in storyboard creation, scriptwriting, and editing for ad campaigns.",
-          "Supported production teams during shoots and post-production workflows.",
-          "Contributed to creative direction and narrative clarity for commercials."
+          "Supported ecosystem communication through structured newsletters, feature stories, reports, and digital editorial publishing.",
+          "Translated programme activity, startup stories, and institutional updates into clearer audience-facing communication.",
+          "Helped build consistency between public messaging, internal outputs, and external visibility assets."
         ]
       },
       {
         heading: "Key Responsibilities",
         items: [
-          "Collaborated on script development and creative conceptualisation.",
-          "Provided editorial support for campaign narratives and messaging.",
-          "Assisted in production planning and on-set coordination."
+          "Curated and packaged updates for newsletters, reports, and editorial releases.",
+          "Worked on copy, structure, and readability for ecosystem-facing communication outputs.",
+          "Aligned reporting-led communication with campaigns, websites, and stakeholder messaging."
         ]
       },
       {
-        heading: "Skills Developed",
-        items: [
-          "Scriptwriting and narrative development for visual media.",
-          "Understanding of video production workflows.",
-          "Collaboration with creative and technical teams."
+        heading: "Reference Link",
+        links: [
+          {
+            label: "Kerala Startup Mission Magazine",
+            url: "https://magazine.startupmission.in/"
+          }
         ]
       }
     ]
@@ -202,15 +220,35 @@ function renderCampaignDetails(campaign) {
     const title = document.createElement("h4");
     title.textContent = section.heading;
 
-    const list = document.createElement("ul");
-    section.items.forEach((item) => {
-      const listItem = document.createElement("li");
-      listItem.textContent = item;
-      list.appendChild(listItem);
-    });
-
     block.appendChild(title);
-    block.appendChild(list);
+
+    if (section.items) {
+      const list = document.createElement("ul");
+      section.items.forEach((item) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = item;
+        list.appendChild(listItem);
+      });
+      block.appendChild(list);
+    }
+
+    if (section.links) {
+      const linksWrap = document.createElement("div");
+      linksWrap.className = "campaign-links";
+
+      section.links.forEach((item) => {
+        const link = document.createElement("a");
+        link.href = item.url;
+        link.target = "_blank";
+        link.rel = "noreferrer";
+        link.className = "campaign-link";
+        link.textContent = item.label;
+        linksWrap.appendChild(link);
+      });
+
+      block.appendChild(linksWrap);
+    }
+
     campaignSections.appendChild(block);
   });
 }
@@ -261,9 +299,21 @@ function initReveal() {
   document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 }
 
+function initPointerGlow() {
+  window.addEventListener(
+    "pointermove",
+    (event) => {
+      document.documentElement.style.setProperty("--pointer-x", `${event.clientX}px`);
+      document.documentElement.style.setProperty("--pointer-y", `${event.clientY}px`);
+    },
+    { passive: true }
+  );
+}
+
 renderCampaignCards();
 renderCampaignDetails(campaigns[0]);
 initReveal();
+initPointerGlow();
 activateCurrentSection();
 
 window.addEventListener("scroll", activateCurrentSection, { passive: true });
