@@ -305,6 +305,10 @@ function initPointerGlow() {
     (event) => {
       document.documentElement.style.setProperty("--pointer-x", `${event.clientX}px`);
       document.documentElement.style.setProperty("--pointer-y", `${event.clientY}px`);
+
+      const viewportWidth = window.innerWidth || 1;
+      const opacity = Math.min(0.9, Math.max(0.28, event.clientX / viewportWidth));
+      document.documentElement.style.setProperty("--grid-opacity", opacity.toFixed(2));
     },
     { passive: true }
   );
