@@ -227,10 +227,10 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
-  gap: 28px;
-  align-items: stretch;
-  min-height: calc(100vh - 150px);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
+  gap: 24px;
+  align-items: start;
+  min-height: auto;
 }
 
 .hero-copy,
@@ -250,9 +250,9 @@ a {
 
 .hero-copy {
   display: grid;
-  gap: 22px;
+  gap: 20px;
   align-content: start;
-  padding: 46px;
+  padding: 40px;
   border-radius: var(--radius-xl);
   position: relative;
   overflow: hidden;
@@ -293,9 +293,9 @@ a {
 }
 
 .hero h1 {
-  font-size: clamp(2.9rem, 5vw, 5rem);
-  line-height: 0.98;
-  max-width: 11ch;
+  font-size: clamp(2.7rem, 4.2vw, 4.4rem);
+  line-height: 1.02;
+  max-width: 8.5ch;
 }
 
 .hero-badge-row {
@@ -317,16 +317,18 @@ a {
 
 .hero-heading-block {
   display: grid;
-  gap: 16px;
+  gap: 14px;
+  max-width: 760px;
 }
 
 .hero-lead {
-  font-size: 1.06rem;
+  font-size: 1rem;
+  max-width: 58ch;
 }
 
 .hero-points {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -348,6 +350,10 @@ a {
   color: var(--muted);
   font-size: 0.92rem;
   line-height: 1.65;
+}
+
+.hero-points div:last-child {
+  grid-column: 1 / -1;
 }
 
 .hero-text,
@@ -457,11 +463,11 @@ a {
 
 .hero-visual {
   display: grid;
-  gap: 14px;
-  max-width: 360px;
+  gap: 12px;
+  max-width: 380px;
   justify-self: end;
   align-content: start;
-  padding: 16px;
+  padding: 14px;
   border-radius: var(--radius-xl);
 }
 
@@ -474,21 +480,27 @@ a {
 
 .portrait-panel img {
   width: 100%;
-  height: min(46vh, 360px);
+  height: min(48vh, 420px);
   object-fit: cover;
   object-position: center 14%;
+  transition: transform 260ms ease;
 }
 
 .portrait-copy {
   position: absolute;
-  left: 22px;
-  right: 22px;
-  bottom: 22px;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
   z-index: 1;
-  padding: 20px;
-  border-radius: 22px;
+  display: grid;
+  gap: 8px;
+  padding: 18px 18px 16px;
+  border-radius: 20px;
   color: #fffdf8;
   background: linear-gradient(180deg, rgba(24, 32, 40, 0.12), rgba(24, 32, 40, 0.82));
+  max-height: 154px;
+  overflow: hidden;
+  transition: max-height 260ms ease, transform 260ms ease, background 260ms ease;
 }
 
 .hero-side-note {
@@ -496,6 +508,7 @@ a {
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(52, 93, 255, 0.12);
+  max-width: 100%;
 }
 
 .portrait-copy strong,
@@ -511,6 +524,35 @@ a {
 .portrait-copy span,
 .portrait-copy strong {
   line-height: 1.35;
+}
+
+.portrait-summary {
+  font-weight: 600;
+  max-width: 24ch;
+}
+
+.portrait-detail {
+  opacity: 0;
+  transform: translateY(8px);
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 220ms ease, transform 220ms ease, max-height 220ms ease;
+}
+
+.portrait-panel:hover img {
+  transform: scale(1.03);
+}
+
+.portrait-panel:hover .portrait-copy {
+  max-height: 240px;
+  transform: translateY(-4px);
+  background: linear-gradient(180deg, rgba(24, 32, 40, 0.18), rgba(24, 32, 40, 0.9));
+}
+
+.portrait-panel:hover .portrait-detail {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 120px;
 }
 
 .section-heading {
@@ -935,6 +977,24 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    order: 2;
+  }
+
+  .hero-visual {
+    order: 1;
+    justify-self: center;
+    max-width: 340px;
+  }
+
+  .hero-points div:last-child {
+    grid-column: auto;
+  }
+
   .timeline-meta {
     border-right: 0;
     border-bottom: 1px solid var(--line);
@@ -978,7 +1038,8 @@ a {
   }
 
   .hero h1 {
-    font-size: 2.6rem;
+    font-size: 2.45rem;
+    max-width: 10ch;
   }
 
   .portrait-panel img {
