@@ -160,51 +160,27 @@ const campaigns = [
   }
 ];
 
-const campaignGrid = document.querySelector("#campaign-grid");
 const campaignTitle = document.querySelector("#campaign-title");
 const campaignSummary = document.querySelector("#campaign-summary");
 const campaignSections = document.querySelector("#campaign-sections");
+const campaignDetailTabs = document.querySelector("#campaign-detail-tabs");
 
-function createCampaignMedia(campaign) {
-  const media = document.createElement("div");
-  media.className = `campaign-media ${campaign.imageClass || ""}`.trim();
+function renderCampaignDetailTabs() {
+  campaignDetailTabs.innerHTML = "";
 
-  if (campaign.image) {
-    const image = document.createElement("img");
-    image.src = campaign.image;
-    image.alt = campaign.title;
-    media.appendChild(image);
-  } else {
-    const text = document.createElement("span");
-    text.textContent = campaign.textMedia;
-    media.appendChild(text);
-  }
-
-  return media;
-}
-
-function renderCampaignCards() {
   campaigns.forEach((campaign, index) => {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = "campaign-card";
+    button.className = "campaign-detail-tab";
     button.dataset.campaignId = campaign.id;
+    button.textContent = campaign.title;
+
     if (index === 0) {
       button.classList.add("is-selected");
     }
 
-    const body = document.createElement("div");
-    body.className = "campaign-card-body";
-    body.innerHTML = `
-      <span class="campaign-label">${campaign.label}</span>
-      <h3>${campaign.title}</h3>
-      <p>${campaign.summary}</p>
-    `;
-
-    button.appendChild(createCampaignMedia(campaign));
-    button.appendChild(body);
     button.addEventListener("click", () => selectCampaign(campaign.id));
-    campaignGrid.appendChild(button);
+    campaignDetailTabs.appendChild(button);
   });
 }
 
@@ -259,8 +235,8 @@ function selectCampaign(campaignId) {
     return;
   }
 
-  document.querySelectorAll(".campaign-card").forEach((card) => {
-    card.classList.toggle("is-selected", card.dataset.campaignId === campaignId);
+  document.querySelectorAll(".campaign-detail-tab").forEach((tab) => {
+    tab.classList.toggle("is-selected", tab.dataset.campaignId === campaignId);
   });
 
   renderCampaignDetails(campaign);
@@ -314,7 +290,7 @@ function initPointerGlow() {
   );
 }
 
-renderCampaignCards();
+renderCampaignDetailTabs();
 renderCampaignDetails(campaigns[0]);
 initReveal();
 initPointerGlow();

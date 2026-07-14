@@ -10,7 +10,7 @@
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -143,8 +143,9 @@
         </div>
 
         <div class="tag-layout reveal">
-          <article class="tag-card">
-            <h3>Core Expertise</h3>
+          <article class="tag-card expertise-card expertise-card-primary">
+            <span class="card-kicker">Core Expertise</span>
+            <h3>Programme systems, campaign execution, and ecosystem communication.</h3>
             <div class="tag-wrap">
               <span>Program Management</span>
               <span>Startup Ecosystem Operations</span>
@@ -157,8 +158,9 @@
             </div>
           </article>
 
-          <article class="tag-card">
-            <h3>Technical Skills</h3>
+          <article class="tag-card expertise-card expertise-card-secondary">
+            <span class="card-kicker">Technical Skills</span>
+            <h3>Operational, publishing, and creative tools used to move campaigns forward.</h3>
             <div class="tag-wrap">
               <span>Google Workspace</span>
               <span>MS Office Suite</span>
@@ -205,11 +207,10 @@
           </div>
         </div>
 
-        <div id="campaign-grid" class="campaign-grid reveal" aria-live="polite"></div>
-
         <aside id="campaign-detail" class="campaign-detail reveal">
           <div class="campaign-detail-header">
             <p class="eyebrow">Campaign Details</p>
+            <div id="campaign-detail-tabs" class="campaign-detail-tabs" aria-label="Campaign detail tabs"></div>
             <h3 id="campaign-title">Huddle Global 2022-2025</h3>
             <p id="campaign-summary"></p>
           </div>
@@ -297,7 +298,7 @@
           </article>
           <article class="achievement-card">
             <h3>Academic Excellence</h3>
-            <p>A+ in CBSE Problem Assessment Test (All-India) and Top 10 in PG-level University Exam.</p>
+            <p>Top 10 rank in MA programme under Kerala University, alongside A+ performance in the CBSE Problem Assessment Test (All-India).</p>
           </article>
         </div>
       </section>
