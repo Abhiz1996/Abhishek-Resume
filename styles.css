@@ -293,9 +293,10 @@ a {
 }
 
 .hero h1 {
-  font-size: clamp(2.15rem, 3.35vw, 3.35rem);
-  line-height: 1.06;
-  max-width: 10.4ch;
+  font-size: clamp(1.28rem, 1.9vw, 1.72rem);
+  line-height: 1.28;
+  max-width: 30ch;
+  letter-spacing: -0.01em;
 }
 
 .hero-badge-row {
@@ -317,7 +318,7 @@ a {
 
 .hero-heading-block {
   display: grid;
-  gap: 12px;
+  gap: 10px;
   max-width: 690px;
 }
 
@@ -896,7 +897,7 @@ a {
 }
 
 .contact-grid {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .contact-card {
@@ -1038,8 +1039,8 @@ a {
   }
 
   .hero h1 {
-    font-size: 2.45rem;
-    max-width: 10ch;
+    font-size: 1.32rem;
+    max-width: 100%;
   }
 
   .portrait-panel img {
