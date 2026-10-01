@@ -2,12 +2,12 @@ const campaigns = [
   {
     "id": "huddle",
     "title": "Huddle Global",
-    "summary": "I help lead social media, marketing, and event storytelling for Huddle Global.",
+    "summary": "Social media, marketing, and event storytelling for Huddle Global.",
     "sections": [
       {
         "heading": "My role",
         "items": [
-          "I plan content, coordinate coverage, and publish event stories with the team."
+          "Content planning, coverage coordination, and event publishing with the team."
         ]
       },
       {
@@ -23,34 +23,25 @@ const campaigns = [
   },
   {
     "id": "ecosystem",
-    "title": "Ecosystem Initiatives",
-    "summary": "I connect KSUM programmes with founders and the public through social media and PR.",
+    "title": "Kerala Startup Mission Initiatives",
+    "summary": "Social media and PR connecting startup programmes with founders and the public.",
     "sections": [
       {
-        "heading": "My work",
+        "heading": "Campaign focus",
         "items": [
-          "I plan campaigns for ecosystem initiatives, innovation grants, and founder outreach.",
-          "I coordinate content across social channels, press, and editorial publications."
+          "Grant outreach, women entrepreneurship, founder stories, and ecosystem communication."
         ]
       },
       {
-        "heading": "From my presentation",
-        "items": [
-          "The innovation grant campaign recorded 778,797 unique users reached on Facebook and Instagram.",
-          "TechXpedition promoted opportunities for women entrepreneurs across India.",
-          "These are historical campaign results from my award presentation."
-        ]
-      },
-      {
-        "heading": "Presentation",
+        "heading": "Explore the work",
         "links": [
           {
-            "label": "View my e-Governance award presentation (PDF)",
-            "url": "assets/ksum-egovernance-presentation.pdf"
+            "label": "Open KSUM Initiatives page",
+            "url": "ksum-initiatives.html"
           },
           {
-            "label": "Preview the innovation grant campaign",
-            "url": "assets/ecosystem-grants.png"
+            "label": "View award presentation (PDF)",
+            "url": "assets/ksum-egovernance-presentation.pdf"
           }
         ]
       }
@@ -59,13 +50,13 @@ const campaigns = [
   {
     "id": "aham",
     "title": "Aham Builders",
-    "summary": "I managed social media and brand communication during the company's early growth.",
+    "summary": "Social media and brand communication during the company's early growth.",
     "sections": [
       {
         "heading": "My work",
         "items": [
-          "I created property campaigns, brochures, and digital creatives.",
-          "I planned social content for buyers and investors."
+          "Property campaigns, brochures, and digital creatives.",
+          "Social content for buyers and investors."
         ]
       }
     ]
@@ -73,13 +64,13 @@ const campaigns = [
   {
     "id": "reports",
     "title": "Newsletters & Reports",
-    "summary": "I turn programme updates and startup stories into clear editorial content.",
+    "summary": "Programme updates and startup stories, shaped into clear editorial content.",
     "sections": [
       {
         "heading": "My work",
         "items": [
-          "I write, edit, and organise newsletters and reports.",
-          "I coordinate content and approvals for publication."
+          "Writing, editing, and organising newsletters and reports.",
+          "Coordinating content and approvals for publication."
         ]
       },
       {
