@@ -2,7 +2,7 @@ const campaigns = [
   {
     "id": "huddle",
     "title": "Huddle Global",
-    "summary": "Social media, marketing, and event storytelling for Huddle Global.",
+    "summary": "Huddle Global 2025: 2.9M+ reported impressions, 680+ posts, and 40+ press releases across the campaign.",
     "sections": [
       {
         "heading": "My role",
@@ -14,7 +14,7 @@ const campaigns = [
         "heading": "Explore the campaign",
         "links": [
           {
-            "label": "View Huddle Global case study",
+            "label": "View Huddle Global: 2025 social & media results",
             "url": "huddle-global.html"
           }
         ]

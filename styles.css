@@ -31,6 +31,16 @@
 .evidence-card img { width: 100%; border-radius: 12px; }
 .evidence-card h3 { margin: 0; }
 @media (max-width: 760px) { .campaign-page-links, .initiative-posts { grid-template-columns: 1fr; } }
+.report-table-wrap { overflow-x: auto; background: #fff; border-radius: 20px; border: 1px solid var(--line); }
+.report-table { width: 100%; border-collapse: collapse; text-align: left; min-width: 650px; }
+.report-table caption { text-align: left; padding: 20px; font-weight: 800; }
+.report-table th, .report-table td { padding: 18px; border-top: 1px solid var(--line); vertical-align: top; }
+.report-table thead { background: #5720c5; color: #fff; }
+.report-table tbody th { max-width: 220px; }
+.report-note { color: var(--muted); font-size: .85rem; margin: 16px 0 24px; max-width: 90ch; }
+.media-metrics { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.media-metrics article { background: #fff; border: 1px solid var(--line); }
+.media-metrics strong { color: #5720c5; }
 .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 22px; }
 .project-dropdown { background: #fff; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; }
 .project-dropdown summary { padding: 24px; cursor: pointer; font-weight: 800; display: flex; align-items: center; justify-content: space-between; gap: 16px; list-style: none; }
