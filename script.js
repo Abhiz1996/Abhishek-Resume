@@ -1,158 +1,93 @@
 const campaigns = [
   {
-    id: "huddle",
-    label: "Flagship Event",
-    title: "Huddle Global 2022-2025",
-    summary:
-      "Part of the marketing, social media and design leadership team for one of India's largest startup events, managing visibility, storytelling, recaps, and ecosystem-facing communication across multiple editions.",
-    image: "assets/HCW09189.jpeg",
-    imageClass: "",
-    sections: [
+    "id": "huddle",
+    "title": "Huddle Global",
+    "summary": "I help lead social media, marketing, and event storytelling for Huddle Global.",
+    "sections": [
       {
-        heading: "Overview",
-        items: [
-          "Part of the marketing, social media and design leadership team for Huddle Global, one of India's largest startup events.",
-          "Managed multi-channel campaign support for consecutive editions from 2022 through 2025.",
-          "Built and executed campaigns combining digital and traditional marketing strategies."
+        "heading": "My role",
+        "items": [
+          "I plan content, coordinate coverage, and publish event stories with the team."
         ]
       },
       {
-        heading: "Role & Responsibilities",
-        items: [
-          "Led social media strategy and execution across platforms including LinkedIn, Instagram, and event communication channels.",
-          "Managed content calendars, event storytelling, and publishing schedules with a focus on reach quality and messaging clarity.",
-          "Worked with leadership and stakeholders to translate event initiatives into public communication.",
-          "Created and managed visuals, reels, recap content, and promotional materials."
-        ]
-      },
-      {
-        heading: "Impact",
-        items: [
-          "Expanded event visibility across the startup ecosystem with sustained engagement.",
-          "Strengthened positioning for Huddle Global as a premier startup networking platform.",
-          "Supported communications for 1000+ startup participants across multiple events."
-        ]
-      },
-      {
-        heading: "Reference Videos",
-        links: [
+        "heading": "Explore the campaign",
+        "links": [
           {
-            label: "Huddle Global 2025 Official Recap",
-            url: "https://www.youtube.com/watch?v=EGpW3zKKbuw"
-          },
-          {
-            label: "Huddle Global 2024 Mashup",
-            url: "https://www.youtube.com/watch?v=SBy4iKOX-VI"
-          },
-          {
-            label: "Huddle Global 2023 Highlights",
-            url: "https://www.youtube.com/watch?v=VjLwFyD5HDE"
+            "label": "View Huddle Global case study",
+            "url": "huddle-global.html"
           }
         ]
       }
     ]
   },
   {
-    id: "ecosystem",
-    label: "Multi-Channel Initiative",
-    title: "Keeraliyam & Ecosystem Initiatives",
-    summary:
-      "Planned and executed high-impact digital campaigns for flagship state-level initiatives across social, websites, newsletters, and reports.",
-    image: "assets/mainbanner1.png",
-    imageClass: "is-graphic",
-    sections: [
+    "id": "ecosystem",
+    "title": "Ecosystem Initiatives",
+    "summary": "I connect KSUM programmes with founders and the public through social media and PR.",
+    "sections": [
       {
-        heading: "Overview",
-        items: [
-          "Planned and executed campaigns for Keeraliyam, Entae Keralam, and Nava Keralam initiatives.",
-          "Managed content across LinkedIn, Instagram, websites, newsletters, and reports.",
-          "Balanced ecosystem storytelling with institutional communication standards."
+        "heading": "My work",
+        "items": [
+          "I plan campaigns for ecosystem initiatives, innovation grants, and founder outreach.",
+          "I coordinate content across social channels, press, and editorial publications."
         ]
       },
       {
-        heading: "Campaign Strategy",
-        items: [
-          "Focused on reach quality, message clarity, and ecosystem visibility.",
-          "Worked with leadership, program teams, and external stakeholders for communication consistency.",
-          "Maintained government communication standards and brand alignment."
+        "heading": "From my presentation",
+        "items": [
+          "The innovation grant campaign recorded 778,797 unique users reached on Facebook and Instagram.",
+          "TechXpedition promoted opportunities for women entrepreneurs across India.",
+          "These are historical campaign results from my award presentation."
         ]
       },
       {
-        heading: "Outcomes",
-        items: [
-          "Strengthened Kerala Startup Mission's visibility as a leader in innovation and digital governance.",
-          "Delivered consistent brand-aligned communication across initiatives.",
-          "Built sustained visibility for ecosystem programs across multiple audience segments."
-        ]
-      }
-    ]
-  },
-  {
-    id: "aham",
-    label: "Brand Strategy",
-    title: "Aham Builders Brand Growth",
-    summary:
-      "Led social media and brand communication for a real-estate growth-stage company through digital presence, creative collateral, and campaign support.",
-    textMedia: "Brand building, property storytelling, and growth-stage visibility.",
-    imageClass: "is-text",
-    sections: [
-      {
-        heading: "Overview",
-        items: [
-          "Managed brand social media and digital presence during an early growth stage.",
-          "Created brochures, digital creatives, and campaign content.",
-          "Secured brand visibility through strategic content and media exposure."
-        ]
-      },
-      {
-        heading: "Deliverables",
-        items: [
-          "Developed brand-aligned social media strategy and content planning.",
-          "Created marketing collateral and digital visuals.",
-          "Executed targeted campaigns for property launches and audience acquisition."
-        ]
-      },
-      {
-        heading: "Results",
-        items: [
-          "Increased brand visibility in a competitive real estate market.",
-          "Built a more professional and audience-facing digital presence.",
-          "Supported business growth through sharper brand communication."
-        ]
-      }
-    ]
-  },
-  {
-    id: "reports",
-    label: "Editorial Systems",
-    title: "Newsletters & Reports",
-    summary:
-      "Managed editorial communication through newsletters, reports, and magazine-style publishing that extended the visibility and documentation of ecosystem work.",
-    textMedia: "Newsletters, reports, and ecosystem storytelling.",
-    imageClass: "is-text",
-    sections: [
-      {
-        heading: "Overview",
-        items: [
-          "Supported ecosystem communication through structured newsletters, feature stories, reports, and digital editorial publishing.",
-          "Translated programme activity, startup stories, and institutional updates into clearer audience-facing communication.",
-          "Helped build consistency between public messaging, internal outputs, and external visibility assets."
-        ]
-      },
-      {
-        heading: "Key Responsibilities",
-        items: [
-          "Curated and packaged updates for newsletters, reports, and editorial releases.",
-          "Worked on copy, structure, and readability for ecosystem-facing communication outputs.",
-          "Aligned reporting-led communication with campaigns, websites, and stakeholder messaging."
-        ]
-      },
-      {
-        heading: "Reference Link",
-        links: [
+        "heading": "Presentation",
+        "links": [
           {
-            label: "Kerala Startup Mission Magazine",
-            url: "https://magazine.startupmission.in/"
+            "label": "View my e-Governance award presentation (PDF)",
+            "url": "assets/ksum-egovernance-presentation.pdf"
+          },
+          {
+            "label": "Preview the innovation grant campaign",
+            "url": "assets/ecosystem-grants.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aham",
+    "title": "Aham Builders",
+    "summary": "I managed social media and brand communication during the company's early growth.",
+    "sections": [
+      {
+        "heading": "My work",
+        "items": [
+          "I created property campaigns, brochures, and digital creatives.",
+          "I planned social content for buyers and investors."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reports",
+    "title": "Newsletters & Reports",
+    "summary": "I turn programme updates and startup stories into clear editorial content.",
+    "sections": [
+      {
+        "heading": "My work",
+        "items": [
+          "I write, edit, and organise newsletters and reports.",
+          "I coordinate content and approvals for publication."
+        ]
+      },
+      {
+        "heading": "Read the work",
+        "links": [
+          {
+            "label": "KSUM Magazine",
+            "url": "https://magazine.startupmission.in/"
           }
         ]
       }
@@ -173,6 +108,7 @@ function renderCampaignDetailTabs() {
     button.type = "button";
     button.className = "campaign-detail-tab";
     button.dataset.campaignId = campaign.id;
+    button.setAttribute("aria-pressed", String(index === 0));
     button.textContent = campaign.title;
 
     if (index === 0) {
@@ -237,6 +173,7 @@ function selectCampaign(campaignId) {
 
   document.querySelectorAll(".campaign-detail-tab").forEach((tab) => {
     tab.classList.toggle("is-selected", tab.dataset.campaignId === campaignId);
+    tab.setAttribute("aria-pressed", String(tab.dataset.campaignId === campaignId));
   });
 
   renderCampaignDetails(campaign);
@@ -290,8 +227,10 @@ function initPointerGlow() {
   );
 }
 
-renderCampaignDetailTabs();
-renderCampaignDetails(campaigns[0]);
+if (campaignDetailTabs) {
+  renderCampaignDetailTabs();
+  renderCampaignDetails(campaigns[0]);
+}
 initReveal();
 initPointerGlow();
 activateCurrentSection();
