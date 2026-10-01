@@ -38,10 +38,6 @@ const campaigns = [
           {
             "label": "Open KSUM Initiatives page",
             "url": "ksum-initiatives.html"
-          },
-          {
-            "label": "View award presentation (PDF)",
-            "url": "assets/ksum-egovernance-presentation.pdf"
           }
         ]
       }
@@ -174,7 +170,7 @@ function activateCurrentSection() {
   const sections = [...document.querySelectorAll("main section[id]")];
   const links = [...document.querySelectorAll(".site-nav a")];
 
-  const activeSection = sections.findLast((section) => {
+  const activeSection = [...sections].reverse().find((section) => {
     const rect = section.getBoundingClientRect();
     return rect.top <= 140;
   });
@@ -186,6 +182,7 @@ function activateCurrentSection() {
 }
 
 function initReveal() {
+  if (window.matchMedia("(max-width: 1100px), (prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -204,6 +201,7 @@ function initReveal() {
 }
 
 function initPointerGlow() {
+  if (!window.matchMedia("(min-width: 1101px) and (hover: hover) and (pointer: fine)").matches || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   window.addEventListener(
     "pointermove",
     (event) => {
@@ -226,4 +224,30 @@ initReveal();
 initPointerGlow();
 activateCurrentSection();
 
-window.addEventListener("scroll", activateCurrentSection, { passive: true });
+let scrollFramePending = false;
+window.addEventListener("scroll", () => {
+  if (scrollFramePending) return;
+  scrollFramePending = true;
+  requestAnimationFrame(() => {
+    activateCurrentSection();
+    scrollFramePending = false;
+  });
+}, { passive: true });
+
+const menuToggle = document.querySelector(".menu-toggle");
+const header = document.querySelector(".site-header");
+if (menuToggle && header) {
+  header.classList.add("has-mobile-menu");
+  const closeMenu = () => {
+    header.classList.remove("nav-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+  };
+  menuToggle.addEventListener("click", () => {
+    const open = header.classList.toggle("nav-open");
+    menuToggle.setAttribute("aria-expanded", String(open));
+  });
+  header.querySelectorAll("nav a").forEach(link => link.addEventListener("click", closeMenu));
+  header.addEventListener("keydown", event => {
+    if (event.key === "Escape") { closeMenu(); menuToggle.focus(); }
+  });
+}
