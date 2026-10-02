@@ -1233,13 +1233,27 @@ a {
   .page-shell::before, .page-shell::after { display: none; }
   .hero-copy, .hero-visual, .info-card, .campaign-spotlight, .campaign-detail, .timeline-item, .achievement-card, .contact-card { backdrop-filter: none; box-shadow: none; }
   .reveal, .reveal.is-visible { opacity: 1; transform: none; transition: none; }
-  .hero-copy { order: 1; }
-  .hero-visual { order: 2; }
+  .hero-copy { order: 2; }
+  .hero-visual { order: 1; width: 100%; max-width: none; justify-self: stretch; padding: 16px; border-radius: 22px; }
+  .hero { gap: 16px; padding-top: 16px; }
+  .portrait-panel { display: grid; grid-template-columns: minmax(100px, .8fr) minmax(0, 1.4fr); align-items: center; gap: 18px; overflow: visible; background: transparent; border-radius: 0; }
+  .portrait-panel img { order: 1; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top; border-radius: 16px; }
+  .portrait-copy, .portrait-panel:hover .portrait-copy { order: 2; position: static; padding: 0; max-height: none; overflow: visible; background: transparent; color: var(--ink); border-radius: 0; transform: none; gap: 8px; }
+  .portrait-copy .mini-label { font-size: .65rem; letter-spacing: .1em; color: #5720c5; }
+  .portrait-copy strong { font-size: clamp(1rem, 3.6vw, 1.3rem); line-height: 1.25; margin: 0; }
+  .portrait-summary { max-width: none; font-size: .85rem; }
+  .portrait-detail, .portrait-panel:hover .portrait-detail { opacity: 1; transform: none; max-height: none; overflow: visible; font-size: .78rem; line-height: 1.5; color: var(--muted); }
+  .portrait-panel:hover img { transform: none; }
+  .hero-side-note { display: none; }
+  .hero p, .portrait-copy { text-align: left; }
+  .hero-socials .social-pills a { font-size: .82rem; line-height: 1.4; }
   .case-hero, .case-grid { grid-template-columns: 1fr; }
   .case-hero img { height: auto; max-height: 360px; }
   .campaign-detail-tab { min-height: 44px; }
 }
 @media (max-width: 480px) {
+  .hero-visual { padding: 14px; }
+  .portrait-panel { gap: 12px; grid-template-columns: minmax(90px, .75fr) minmax(0, 1.4fr); }
   .hero-copy, .info-card, .tag-card, .campaign-detail, .timeline-item, .achievement-card, .contact-card { padding: 18px; border-radius: 20px; }
   .section { padding: 24px 0; }
   .case-metrics strong { font-size: 2rem; overflow-wrap: anywhere; }
