@@ -7,14 +7,14 @@ const campaigns = [
       {
         "heading": "My role",
         "items": [
-          "Content planning, coverage coordination, and event publishing with the team."
+          "Social media and PR coordination, event coordination, and marketing."
         ]
       },
       {
         "heading": "Explore the campaign",
         "links": [
           {
-            "label": "View Huddle Global: 2025 social & media results",
+            "label": "View Huddle Global Campaign",
             "url": "huddle-global.html"
           }
         ]
