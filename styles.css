@@ -927,7 +927,9 @@ a {
 .achievement-card {
   display: grid;
   align-content: start;
-  gap: 12px;
+  gap: 16px;
+  min-width: 0;
+  text-align: left;
   padding: 28px;
   border-radius: var(--radius-lg);
   transition: transform 180ms ease, box-shadow 180ms ease;
@@ -935,14 +937,16 @@ a {
 
 .achievement-card h3 {
   margin: 0;
-  font-family: "Archivo Black", sans-serif;
-  font-size: clamp(1.6rem, 3vw, 2.7rem);
-  line-height: 0.94;
-  text-transform: uppercase;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  line-height: 1.25;
+  text-transform: none;
+  overflow-wrap: anywhere;
 }
 
 .achievement-card p {
-  max-width: 28ch;
+  max-width: none;
   font-size: 1rem;
   line-height: 1.6;
 }
