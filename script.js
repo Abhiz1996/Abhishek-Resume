@@ -2,12 +2,12 @@ const campaigns = [
   {
     "id": "huddle",
     "title": "Huddle Global",
-    "summary": "Huddle Global 2025: 2.9M+ reported impressions, 680+ posts, and 40+ press releases across the campaign.",
+    "summary": "Led Huddle Global promotion in close coordination with national and state media, connecting design and social media marketing with event planning and venue design coordination.",
     "sections": [
       {
         "heading": "My role",
         "items": [
-          "Social media and PR coordination, event coordination, and marketing."
+          "Leadership across media relations, creative campaigns, event planning, and venue design coordination."
         ]
       },
       {
@@ -24,7 +24,7 @@ const campaigns = [
   {
     "id": "ecosystem",
     "title": "Kerala Startup Mission Initiatives",
-    "summary": "Social media and PR connecting startup programmes with founders and the public.",
+    "summary": "Clear communication connecting Kerala Startup Mission with Kerala's startup stakeholders.",
     "sections": [
       {
         "heading": "Campaign focus",
