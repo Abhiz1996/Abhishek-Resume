@@ -766,6 +766,18 @@ a {
   border-color: rgba(255, 255, 255, 0.14);
 }
 
+.case-hero.huddle-hero { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+.huddle-hero > div:first-child { max-width: 850px; }
+.huddle-gallery { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 16px; align-items: center; }
+.huddle-gallery-banner { grid-column: 1 / -1; }
+.huddle-gallery a { display: block; min-width: 0; border-radius: 20px; overflow: hidden; }
+.huddle-gallery a:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+.case-hero .huddle-gallery img { display: block; width: 100%; height: auto; max-height: none; object-fit: contain; border-radius: 0; }
+@media (max-width: 700px) {
+  .huddle-gallery { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .huddle-gallery a { border-radius: 14px; }
+}
+
 .campaign-workspace {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
